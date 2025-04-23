@@ -1,0 +1,64 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+section {min-height: 100vh;}
+
+/*Reset*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ff0c18;
+    width: 100vw;    
+}
+
+header{
+    border: 1px dotted black;
+}
+nav ul li{
+    border: 1px dotted black;
+    background-color: black;
+    text-decoration: none;
+    
+}
+
+main section div{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px black;
+    background-color: rgb(211, 211, 211);
+}
+
+main section div img {
+    border-radius: 5px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
