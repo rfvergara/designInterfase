@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campeonato Brasileiro - Série A</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <a href="/">Logo</a>
+      <ul class="menu">
+        <li><a href="/">Sobre</a></li>
+        <li><a href="/">Produto</a></li>
+        <li><a href="/">Contato</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <div><h1>Campeonato Brasileiro - Série A</h1></div>
+        <div class="container">
+          <div class="formulario">
+            <!-- Formulário de inserção -->
+            <form>
+              <fieldset>
+                <legend>Jogo</legend>
+                <div class="formularios">
+                  <div>
+                    <select name="mandante" id="mandante">
+                      <option selected disabled>Mandante</option>
+                      <option>Atlético-MG</option>
+                      <option>Bahia</option>
+                      <option>Botafogo</option>
+                      <option>Ceará</option>
+                      <option>Corinthians</option>
+                      <option>Cruzeiro</option>
+                      <option>Flamengo</option>
+                      <option>Fluminense</option>
+                      <option>Juventude</option>
+                      <option>Grêmio</option>
+                      <option>Internacional</option>
+                      <option>Mirassol</option>
+                      <option>Palmeiras</option>
+                      <option>RB Bragantino</option>
+                      <option>Santos</option>
+                      <option>São Paulo</option>
+                      <option>Sport</option>
+                      <option>Vasco</option>
+                      <option>Vitória</option>
+                    </select>
+                  </div>
+                  <p>x</p>
+                  <div>
+                    <select name="visitante" id="visitante">
+                      <option selected disabled>Visitante</option>
+                      <option>Atlético-MG</option>
+                      <option>Bahia</option>
+                      <option>Botafogo</option>
+                      <option>Ceará</option>
+                      <option>Corinthians</option>
+                      <option>Cruzeiro</option>
+                      <option>Flamengo</option>
+                      <option>Fluminense</option>
+                      <option>Juventude</option>
+                      <option>Grêmio</option>
+                      <option>Internacional</option>
+                      <option>Mirassol</option>
+                      <option>Palmeiras</option>
+                      <option>RB Bragantino</option>
+                      <option>Santos</option>
+                      <option>São Paulo</option>
+                      <option>Sport</option>
+                      <option>Vasco</option>
+                      <option>Vitória</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="informacao">
+                  <div>
+                    <label for="rodada">Rodada:</label>
+                    <input
+                      type="text"
+                      id="rodada"
+                      placeholder="Ex: Rodada 21"
+                    />
+                  </div>
+                  <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" />
+                  </div>
+                  <div>
+                    <label for="placar">Placar:</label>
+                    <input type="text" id="placar" placeholder="Ex: 3x1" />
+                  </div>
+                </div>
+
+                <div class="btn">
+                  <button class="adicionar">Adicionar</button>
+                  <button class="deletar">Deletar</button>
+                </div>
+              </fieldset>
+            </form>
+
+            <!-- Formulário de configuração da tabela -->
+            <form>
+              <fieldset class="pos">
+                <legend>Configurações da tabela</legend>
+                <div class="setTabela">
+                  <div>
+                    <label for="corLetra">Texto:</label>
+                    <select id="corLetra">
+                      <option value="default">Default</option>
+                      <option value="black">Preto</option>
+                      <option value="red">Vermelho</option>
+                      <option value="blue">Azul</option>
+                      <option value="green">Verde</option>
+                      <option value="orange">Laranja</option>
+                      <option value="purple">Roxo</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="corFundo">Fundo:</label>
+                    <select id="corFundo">
+                      <option value="default">Default</option>
+                      <option value="white">Branco</option>
+                      <option value="lightyellow">Amarelo Claro</option>
+                      <option value="lightblue">Azul Claro</option>
+                      <option value="lightgreen">Verde Claro</option>
+                      <option value="lightgray">Cinza Claro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="corBorda">Bordas:</label>
+                    <select id="corBorda">
+                      <option value="default">Default</option>
+                      <option value="gray">Cinza</option>
+                      <option value="black">Preto</option>
+                      <option value="red">Vermelho</option>
+                      <option value="blue">Azul</option>
+                      <option value="green">Verde</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn">
+                  <button class="estilo" type="submit">Aplicar Estilos</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <!-- Div da tabela -->
+          <div class="tabela">
+            <table>
+              <caption>
+                Informações dos jogos
+              </caption>
+              <thead>
+                <tr>
+                  <th>Rodada</th>
+                  <th>Data</th>
+                  <th>Mandante</th>
+                  <th>Visitante</th>
+                  <th>Placar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Começa vazia -->
+              </tbody>
+              <tfoot>
+                <!--<tr><td></td><td></td></tr>-->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Botões
+        var botaoAdicionar = document.querySelector(".adicionar");
+        var botaoDeletar = document.querySelector(".deletar");
+        var botaoEstilo = document.querySelector(".estilo");
+
+        // Tabela
+        var tabelaDiv = document.querySelector(".tabela");
+        var tabela = document.querySelector(".tabela table");
+        var tbody = tabela.querySelector("tbody");
+
+        // Tabela invisivel
+        tabelaDiv.style.display = "none";
+
+        // Botão adicionar
+        botaoAdicionar.addEventListener("click", function (evento) {
+          evento.preventDefault();
+
+          var rodada = document.getElementById("rodada").value;
+          var data = document.getElementById("data").value;
+          var placar = document.getElementById("placar").value;
+          var mandante = document.getElementById("mandante").value;
+          var visitante = document.getElementById("visitante").value;
+
+          if (
+            rodada === "" ||
+            data === "" ||
+            placar === "" ||
+            mandante === "Mandante" ||
+            visitante === "Visitante"
+          ) {
+            alert("Preencha todos os campos!");
+            return;
+          }
+
+          tabelaDiv.style.display = "block";
+
+          var linha = document.createElement("tr");
+          linha.innerHTML =
+            "<td>" +
+            rodada +
+            "</td>" +
+            "<td>" +
+            data +
+            "</td>" +
+            "<td>" +
+            mandante +
+            "</td>" +
+            "<td>" +
+            visitante +
+            "</td>" +
+            "<td>" +
+            placar +
+            "</td>";
+
+          tbody.appendChild(linha);
+
+          // Limpa os campos
+          document.getElementById("rodada").value = "";
+          document.getElementById("data").value = "";
+          document.getElementById("placar").value = "";
+          document.getElementById("mandante").selectedIndex = 0;
+          document.getElementById("visitante").selectedIndex = 0;
+        });
+
+        // Botão deletar
+        botaoDeletar.addEventListener("click", function (evento) {
+          evento.preventDefault();
+          tbody.innerHTML = "";
+          tabelaDiv.style.display = "none";
+        });
+
+        // Botão estilos
+        botaoEstilo.addEventListener("click", function (evento) {
+          evento.preventDefault();
+
+          var corLetra = document.getElementById("corLetra").value;
+          var corFundo = document.getElementById("corFundo").value;
+          var corBorda = document.getElementById("corBorda").value;
+
+          if (corLetra !== "default") {
+            tabela.style.color = corLetra;
+          } else {
+            tabela.style.color = "";
+          }
+
+          if (corFundo !== "default") {
+            tabela.style.backgroundColor = corFundo;
+          } else {
+            tabela.style.backgroundColor = "";
+          }
+
+          if (corBorda !== "default") {
+            tabela.style.border = "2px solid " + corBorda;
+            var celulas = tabela.querySelectorAll("th, td");
+            for (var i = 0; i < celulas.length; i++) {
+              celulas[i].style.border = "1px solid " + corBorda;
+            }
+          } else {
+            tabela.style.border = "";
+            var celulas = tabela.querySelectorAll("th, td");
+            for (var i = 0; i < celulas.length; i++) {
+              celulas[i].style.border = "";
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

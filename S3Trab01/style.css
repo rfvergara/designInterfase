@@ -1,0 +1,186 @@
+body,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #1d1e20;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+}
+.menu li {
+  margin-left: 10px;
+}
+.menu li a {
+  display: block;
+  padding: 10px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./img/futebol-720x480.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 10px;
+  border: 2px solid #d0ff00f6;
+  width: 95%;
+  height: 85%;
+}
+
+.formulario {
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formularios,
+.informacao,
+.btn,
+.setTabela {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+form {
+  display: grid;
+}
+
+fieldset {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+legend,
+caption {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+select,
+input,
+textarea {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select option,
+thead th,
+tbody td,
+tfoot td {
+  text-align: center;
+}
+
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 120px;
+}
+
+.adicionar {
+  background: #4caf50;
+  color: white;
+}
+
+.deletar {
+  background: #e53935;
+  color: white;
+}
+
+.estilo {
+  background: #2196f3;
+  color: white;
+}
+
+.tabela {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  height: 90%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .formulario,
+  .tabela {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: rgb(18, 88, 0);
+}
+
+.pos {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+}
