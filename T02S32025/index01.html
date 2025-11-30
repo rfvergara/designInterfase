@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            width: 70vw;
+            height: 60vh;            
+            margin: 20vh auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <my-header titulo="Curiosidades!!!"></my-header>
+        <my-nav></my-nav>
+        <my-main01></my-main01>
+        <my-footer mensagem="Trabalho 2 de JavaScript – Gerador de páginas HTML"></my-footer>
+    </div>
+    <script type="module" src="./headerNavFooter/headerNavFooter.js"></script>
+    <script type="module" src="./main/main01.js"></script>
+</body>
+
+</html>
